@@ -1,7 +1,7 @@
 const UglifyPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OptimizeAssetPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
 const utils = require('./library/util.lib');
