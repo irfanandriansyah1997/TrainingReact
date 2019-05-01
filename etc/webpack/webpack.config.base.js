@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OptimizeAssetPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
-const utils = require('./utils');
+const utils = require('./library/util.lib');
 
 module.exports = {
     resolve: {
@@ -101,13 +101,13 @@ module.exports = {
             filename: '[name].css',
             chunkFilename: '[id].css'
         }),
-        new OptimizeAssetPlugin(),
-        new CopyWebpackPlugin([
-            {
-                from: utils.resolve('static/font'),
-                to: utils.resolve('dist/static/font'),
-                toType: 'dir'
-            }
-        ])
+        new OptimizeAssetPlugin()
+        // new CopyWebpackPlugin([
+        //     {
+        //         from: utils.resolve('static/font'),
+        //         to: utils.resolve('dist/static/font'),
+        //         toType: 'dir'
+        //     }
+        // ])
     ]
 };
