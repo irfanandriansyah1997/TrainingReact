@@ -3,8 +3,16 @@
     "version": "0.0.0",
     "description": "create component & landing page using react js & redux",
     "main": "index.js",
+    "pre-commit": [
+        "precommit-msg",
+        "precommit"
+    ],
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "node_modules/.bin/webpack-dev-server --progress --config etc/webpack/webpack.config.development.js",
+        "prod": "node_modules/.bin/webpack --config etc/webpack/webpack.config.production.js",
+        "lint": "node_modules/.bin/eslint --ext .js,.jsx src",
+        "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+        "precommit": "npm run lint"
     },
     "repository": {
         "type": "git",
