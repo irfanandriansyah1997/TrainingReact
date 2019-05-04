@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Router from './routes';
+import './styles/scss/app.scss';
 
-ReactDOM.render(
-    <h1>Hai Hello</h1>,
-    document.getElementById('app')
-);
+ReactDOM.render(<Router />, document.getElementById('app'));
