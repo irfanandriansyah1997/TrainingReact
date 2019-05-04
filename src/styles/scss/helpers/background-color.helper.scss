@@ -1,0 +1,27 @@
+/**
+ * Background Color Helper
+ */
+
+.bg-primary {
+    @include background-color($primary);
+}
+
+.bg-secondary {
+    @include background-color($secondary);
+}
+
+.bg-success {
+    @include background-color($success);
+}
+
+.bg-white {
+    @include background-color($white);
+}
+
+.bg-black {
+    @include background-color($black);
+}
+
+.transparent {
+    background: transparent;
+}
