@@ -2,6 +2,7 @@ const UglifyPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const OptimizeAssetPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
 const utils = require('./library/util.lib');
@@ -101,7 +102,17 @@ module.exports = {
             filename: '[name].css',
             chunkFilename: '[id].css'
         }),
-        new OptimizeAssetPlugin()
+        new OptimizeAssetPlugin(),
+        new PreloadWebpackPlugin({
+            rel: 'preload',
+            include: 'allAssets',
+            as(entry) {
+                if (/\.css$/.test(entry)) return 'style';
+                if (/\.woff$/.test(entry)) return 'font';
+                if (/\.png$/.test(entry)) return 'image';
+                return 'script';
+            }
+        })
         // new CopyWebpackPlugin([
         //     {
         //         from: utils.resolve('static/font'),

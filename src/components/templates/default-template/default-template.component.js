@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
-import NavbarComponent from '@/components/organisms/navbar/navbar.component';
 import FooterComponent from '@/components/organisms/footer/footer.component';
+import './style/style.scss';
+
+const NavbarComponent = lazy(() => import('@/components/organisms/navbar/navbar.component'));
 
 class DefaultTemplateComponent extends Component {
     render() {
@@ -9,8 +11,10 @@ class DefaultTemplateComponent extends Component {
 
         return (
             <div className="ui ui-default">
-                <div className="ui-default__navbar">
-                    <NavbarComponent />
+                <div className="ui-default__navbar fixed block">
+                    <Suspense fallback={null}>
+                        <NavbarComponent />
+                    </Suspense>
                 </div>
                 <div className="ui-default__content">{children}</div>
                 <div className="ui-default__footer">

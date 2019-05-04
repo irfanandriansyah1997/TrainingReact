@@ -38,3 +38,22 @@
 .float-right {
     float: right;
 }
+
+.container {
+    width: calc(100% - 232px);
+
+    @include margin(all, auto);
+
+    &::before,
+    &::after {
+        content: '';
+    }
+
+    &::before {
+        display: table;
+    }
+
+    &::after {
+        clear: both;
+    }
+}
