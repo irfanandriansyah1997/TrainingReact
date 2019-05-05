@@ -1,6 +1,5 @@
 const UglifyPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const OptimizeAssetPlugin = require('optimize-css-assets-webpack-plugin');
@@ -80,10 +79,32 @@ module.exports = {
         ]
     },
     optimization: {
+        moduleIds: 'hashed',
+        splitChunks: {
+            chunks: 'async',
+            minChunks: 1,
+            maxAsyncRequests: 10,
+            cacheGroups: {
+                vendorJS: {
+                    test: /[\\/]node_modules[\\/](?!vuetify).*[\\/]/,
+                    name: 'vendor',
+                    chunks: 'all',
+                    priority: 20
+                },
+                vendor: {
+                    test: /\.(css|less|stylus|styl)$/,
+                    name: 'vendor',
+                    chunks: 'all',
+                    priority: 10
+                }
+            }
+        },
+        usedExports: true,
         minimizer: [
             new UglifyPlugin({
                 cache: true,
                 parallel: true,
+                sourceMap: true,
                 uglifyOptions: {
                     mangle: {
                         keep_fnames: true
@@ -96,22 +117,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'index.html',
-            inject: true
-        }),
-        new MiniCssExtractPlugin({
-            filename: '[name].css',
-            chunkFilename: '[id].css'
+            inject: true,
+            hash: true
         }),
         new OptimizeAssetPlugin(),
         new PreloadWebpackPlugin({
             rel: 'preload',
             include: 'allAssets',
-            as(entry) {
-                if (/\.css$/.test(entry)) return 'style';
-                if (/\.woff$/.test(entry)) return 'font';
-                if (/\.png$/.test(entry)) return 'image';
-                return 'script';
-            }
+            fileWhitelist: [/\.css/],
+            fileBlacklist: [/\.js/]
         })
         // new CopyWebpackPlugin([
         //     {
