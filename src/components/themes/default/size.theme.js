@@ -43,14 +43,14 @@ const columnSize = Array.from(Array(12), (x, index) => {
  * variable viewport responsive
  */
 const viewportSize = {
-    extraSmallDeviceMin: '575.98px',
-    extraSmallDeviceMax: '576px',
-    smallDeviceMin: '767.98px',
+    extraSmallDeviceMin: '575.98',
+    extraSmallDeviceMax: '576',
+    smallDeviceMin: '767.98',
     smallDeviceMax: '768',
-    mediumDeviceMin: '991.98px',
-    mediumDeviceMax: '992px',
-    largeDeviceMin: '1199.98px',
-    largeDeviceMax: '1120px'
+    mediumDeviceMin: '991.98',
+    mediumDeviceMax: '992',
+    largeDeviceMin: '1199.98',
+    largeDeviceMax: '1120'
 };
 
 export default {

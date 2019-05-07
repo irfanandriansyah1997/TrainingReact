@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { palette, size } from 'styled-theme';
+import { backgroundColor } from '@/styles/styled-component/mixins/background.mixin';
+import { upMediaQuery, downMediaQuery, betweenMediaQuery } from '@/styles/styled-component/mixins/media-query.mixin';
 
 const ContainerComponent = styled.div`
     display: ${(props) => props.display};
@@ -11,27 +14,31 @@ const ContainerComponent = styled.div`
     width: calc(100% - 232px);
     padding-right: 10px;
     padding-left: 10px;
+    ${backgroundColor(palette('white', 0, false))}
 
     // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 576px) {
-        max-width: 576px;
+    ${downMediaQuery(size('extraSmallDeviceMax'))`
+        max-width: ${size('extraSmallDeviceMax')}px;
         width: 100%;
-    }
+    `}
 
     // Medium devices (tablets, 768px and up)
-    @media (min-width: 576px) {
-        max-width: 767.98px;
-    }
+    ${upMediaQuery(size('extraSmallDeviceMax'))`
+        max-width: ${size('smallDeviceMin')}px;
+        width: 100%;
+    `}
 
     // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) {
-        max-width: 991.98px;
-    }
+    ${upMediaQuery(size('smallDeviceMax'))`
+        max-width: ${size('mediumDeviceMin')}px;
+        width: 100%;
+    `}
 
     // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) {
-        max-width: 1199.98px;
-    }
+    ${upMediaQuery(size('mediumDeviceMax'))`
+        max-width: ${size('largeDeviceMin')}px;
+        width: 100%;
+    `}
 `;
 
 ContainerComponent.propTypes = {
