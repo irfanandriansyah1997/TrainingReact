@@ -10,8 +10,8 @@ const baseConfig = require('./webpack.config.base');
 module.exports = merge(baseConfig, {
     mode: 'production',
     output: {
-        filename: '[name].[chunkhash:32].bundle.js',
-        chunkFilename: '[name].[chunkhash:32].chunk.bundle.js'
+        filename: 'script/[name].[chunkhash:32].bundle.js',
+        chunkFilename: 'script/[name].[chunkhash:32].chunk.bundle.js'
     },
     module: {
         rules: [
@@ -48,8 +48,8 @@ module.exports = merge(baseConfig, {
         }),
         new OptimizeCSSAssetsPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].[hash].css',
-            chunkFilename: '[name].[hash].chunk.css'
+            filename: 'style/[name].[hash].css',
+            chunkFilename: 'style/[name].[hash].chunk.css'
         }),
         new WorkboxPlugin.GenerateSW({
             swDest: 'sw.js',
