@@ -119,6 +119,7 @@
         "testURL": "http://localhost/",
         "collectCoverageFrom": [
             "src/**/*.{js,jsx}",
+            "!src/components/themes/**/*.{js,jsx}",
             "!dist/**/*.js",
             "!dist/*.js",
             "!src/*.scss",
