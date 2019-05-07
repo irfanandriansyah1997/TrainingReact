@@ -2,7 +2,8 @@ module.exports = {
     env: {
         browser: true,
         node: true,
-        jasmine: true
+        jasmine: true,
+        jest: true
     },
     plugins: [],
     extends: ['airbnb'],
@@ -33,7 +34,7 @@ module.exports = {
         'no-bitwise': [1, { allow: ['~', '>>>', '>>', '<<', '|', '&'], int32Hint: true }],
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
         'no-underscore-dangle': [0],
-        'no-unused-vars': [0, { "argsIgnorePattern": "next" }],
+        'no-unused-vars': [0, { argsIgnorePattern: 'next' }],
         quotes: [2, 'single'],
         semi: [2, 'always'],
         'space-before-function-paren': 'off',

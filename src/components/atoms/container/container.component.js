@@ -1,20 +1,16 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { palette, size } from 'styled-theme';
-import { backgroundColor } from '@/styles/styled-component/mixins/background.mixin';
-import { upMediaQuery, downMediaQuery, betweenMediaQuery } from '@/styles/styled-component/mixins/media-query.mixin';
+import { size } from 'styled-theme';
+import { upMediaQuery, downMediaQuery } from '@/styles/styled-component/mixins/media-query.mixin';
 
 const ContainerComponent = styled.div`
-    display: ${(props) => props.display};
     position: ${(props) => props.position};
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1200px;
+    display: ${(props) => props.display};
+    margin: auto;
+    padding: 0 10px;
     height: ${(props) => props.height};
     width: calc(100% - 232px);
-    padding-right: 10px;
-    padding-left: 10px;
-    ${backgroundColor(palette('white', 0, false))}
+    max-width: 1200px;
 
     // Extra small devices (portrait phones, less than 576px)
     ${downMediaQuery(size('extraSmallDeviceMax'))`
