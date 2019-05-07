@@ -51,6 +51,33 @@ jobs:
             - run:
                   name: Run Linter
                   command: yarn lint
+    test:
+        filters:
+            branches:
+                ignore:
+                    - gh-pages
+        docker:
+            - image: circleci/node:8.11
+        working_directory: ~/repo
+        steps:
+            - checkout
+            - restore_cache:
+                  keys:
+                      - v1-dependencies-{{ checksum "package.json" }}
+                      - v1-dependencies-
+            - run:
+                  name: Install depedencies
+                  command: yarn install
+            - save_cache:
+                  paths:
+                      - web/node_modules
+                  key: v1-dependencies-{{ checksum "package.json" }}
+            - run:
+                  name: Run unit test
+                  command: yarn test
+            - run:
+                  name: Set codecov
+                  command: node_modules/.bin/codecov --token=df123187-aba8-44bf-a3e8-b3c90638f56a
     deploy:
         filters:
             branches:
@@ -116,6 +143,13 @@ workflows:
                               - gh-pages
                   requires:
                       - build
+            - test:
+                  filters:
+                      branches:
+                      ignore:
+                          - gh-pages
+                  requires:
+                      - build
             - deploy:
                   filters:
                       branches:
@@ -123,3 +157,4 @@ workflows:
                               - gh-pages
                   requires:
                       - linter
+                      - test
