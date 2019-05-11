@@ -6,5 +6,6 @@ export default {
     success: ['#4cba7e', '#25b365', '#b5e8cc', '#dcf2e6'],
     whitesmoke: ['#c5d4de', '#bdccd9', '#dfe8ed', '#f1f4f7'],
     grayscale: ['#3e4246', '#4d565e', '#c2c7cc', '#c2c7cc'],
-    white: ['#fff', '#f5f5f5']
+    white: ['#fff', '#f5f5f5'],
+    border: ['#d8d8d8']
 };
