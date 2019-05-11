@@ -1,11 +1,21 @@
-import React, { Component } from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-export default class ButtonComponent extends Component {
-    render() {
-        return (
-            <a className="asas" href="asas">
-                JIJI
-            </a>
-        );
-    }
-}
+const ButtonComponent = styled.button`
+    diplay: ${({ display }) => display};
+`;
+
+ButtonComponent.propTypes = {
+    display: PropTypes.string,
+    position: PropTypes.string,
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+};
+
+ButtonComponent.defaultProps = {
+    display: 'flex',
+    position: 'relative',
+    height: 'inherit'
+};
+
+
+export default ButtonComponent;

@@ -8,7 +8,7 @@ import Theme from '@/components/themes/default';
 
 import './styles/scss/app.scss';
 
-ReactDOM.render(
+ReactDOM.hydrate(
     <ThemeProvider theme={Theme}>
         <Router />
     </ThemeProvider>,

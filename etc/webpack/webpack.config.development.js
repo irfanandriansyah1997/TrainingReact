@@ -7,6 +7,7 @@ const PORT = 8080;
 
 module.exports = merge(baseConfig, {
     mode: 'development',
+    devtool: 'cheap-module-eval-source-map',
     watch: true,
     devServer: {
         clientLogLevel: 'warning',
