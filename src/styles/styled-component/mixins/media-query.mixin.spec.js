@@ -21,7 +21,6 @@ it('Test render media query', () => {
         `}
     `;
     const component = renderer.create(<Style />).toJSON();
-    expect(component).toMatchSnapshot();
 
     // upMediaQuery test
     expect(component).toHaveStyleRule('background-color', '#ddd', {
