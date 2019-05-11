@@ -25,12 +25,14 @@ module.exports = {
         indent: [2, 4],
         'import/no-extraneous-dependencies': [0],
         'import/no-unresolved': [0],
+        'import/prefer-default-export': [0],
         'import/resolver': {
             node: {
                 extensions: ['.js', '.jsx', '.vue', '.es6']
             }
         },
         'linebreak-style': [2, 'unix'],
+        'max-len': [2, { code: 100 }],
         'no-bitwise': [1, { allow: ['~', '>>>', '>>', '<<', '|', '&'], int32Hint: true }],
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
         'no-underscore-dangle': [0],
