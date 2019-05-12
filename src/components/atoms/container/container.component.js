@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { size } from 'styled-theme';
 import { upMediaQuery, downMediaQuery } from '@/styles/styled-component/mixins/media-query.mixin';

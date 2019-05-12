@@ -12,6 +12,14 @@ const fontSize = {
 };
 
 /*
+ * button font size
+ */
+const buttonFontSize = {
+    buttonFontDefault: fontSize.textSizeSm,
+    buttonFontSmall: fontSize.textSizeXs
+};
+
+/*
  * variable spacing padding & margin
  */
 const spacingSize = {
@@ -57,5 +65,6 @@ export default {
     ...fontSize,
     ...columnSize,
     ...spacingSize,
-    ...viewportSize
+    ...viewportSize,
+    ...buttonFontSize
 };

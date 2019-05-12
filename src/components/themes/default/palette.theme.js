@@ -1,6 +1,10 @@
 export default {
-    primary: ['#3893d9', '#3d8ecc', '#b8daf5', '#deedfa'],
-    secondary: ['#ff609c', '#ed518d', '#f5b8cf', '#fadee9'],
+    primary: ['#3893d9', '#3d8ecc', '#9ed4ff', '#deedfa'],
+    primaryText: ['#fff', 'rgba(255, 255, 255, 0.75)', '#3e4246', 'rgba(62, 66, 70, 0.5)'],
+    secondary: ['#ff609c', '#ed518d', '#f8acc8', '#fadee9'],
+    secondaryText: ['#fff', 'rgba(255, 255, 255, 0.75)', '#3e4246', 'rgba(62, 66, 70, 0.5)'],
+    tertiary: ['#fff', '#f6f6f6', 'rgba(255,255,255,0.75)'],
+    tertiaryText: ['#3e4246', 'rgba(62, 66, 70, 0.5)', '#3e4246', 'rgba(62, 66, 70, 0.5)'],
     danger: ['#f2545b', '#d94c53', '#f8a9ad', '#fdedee'],
     warning: ['#f58c35', '#e68632', '#fad6b9', '#fcf0e6'],
     success: ['#4cba7e', '#25b365', '#b5e8cc', '#dcf2e6'],
