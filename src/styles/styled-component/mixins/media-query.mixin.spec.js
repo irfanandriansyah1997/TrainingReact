@@ -1,3 +1,9 @@
+/**
+ * Media Query Mixin Test
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.12
+ */
+
 import React from 'react';
 import styled, { css } from 'styled-components';
 import renderer from 'react-test-renderer';
@@ -34,7 +40,7 @@ it('Test render media query', () => {
 
     // betweenMediaQuery Test
     expect(component).toHaveStyleRule('background-color', '#000', {
-        media: '( min-width:300px ) and ( max-width:499.98px )'
+        media: '(min-width:300px) and (max-width:499.98px)'
     });
 
     // default style test

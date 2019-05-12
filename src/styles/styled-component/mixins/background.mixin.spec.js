@@ -1,7 +1,13 @@
+/**
+ * Background Mixin Test
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.12
+ */
+
 import React from 'react';
 import styled from 'styled-components';
 import renderer from 'react-test-renderer';
-import { backgroundColor, backgroundImage } from './background.mixin';
+import { backgroundColor, backgroundImage, noBackground } from './background.mixin';
 import 'jest-styled-components';
 
 it('Test render background grey', () => {
@@ -30,4 +36,14 @@ it('Test render background image default', () => {
     expect(component).toHaveStyleRule('background-image', 'url(images)');
     expect(component).toHaveStyleRule('background-position', 'initial');
     expect(component).toHaveStyleRule('background-repeat', 'initial');
+});
+
+it('Test render no background', () => {
+    const Style = styled.button`
+        ${noBackground()}
+    `;
+    const component = renderer.create(<Style />).toJSON();
+    expect(component).toHaveStyleRule('background-color', 'transparent');
+    expect(component).toHaveStyleRule('background-image', 'initial');
+    expect(component).toHaveStyleRule('background', 'initial');
 });
