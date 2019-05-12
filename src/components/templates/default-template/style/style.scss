@@ -9,4 +9,9 @@
 
         @include border-bottom(0.8px, solid, $card-border);
     }
+
+    &__content {
+        @include margin-top(50px);
+        @include padding(all, 10px);
+    }
 }

@@ -1,3 +1,9 @@
+/**
+ * Box Shadow Mixin Test
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.12
+ */
+
 import React from 'react';
 import styled, { css } from 'styled-components';
 import renderer from 'react-test-renderer';
