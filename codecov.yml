@@ -8,6 +8,7 @@ ignore:
     - "**/routes/.*"
     - "**/.circleci/.*"
     - "**/*.stories.js"
+    - "**/.storybook/.*"
     - "**/*.spec.js"
     - "**/*.scss"
     - "**/*.svg"

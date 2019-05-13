@@ -19,7 +19,12 @@ module.exports = {
     },
     rules: {
         'arrow-parens': [0],
-        'class-methods-use-this': [0, { exceptMethods: ['render'] }],
+        'class-methods-use-this': [
+            0,
+            {
+                exceptMethods: ['render']
+            }
+        ],
         'comma-dangle': [2, 'never'],
         'generator-star-spacing': 'off',
         indent: [2, 4],
@@ -32,17 +37,36 @@ module.exports = {
             }
         },
         'linebreak-style': [2, 'unix'],
-        'max-len': [2, { code: 100 }],
-        'no-bitwise': [1, { allow: ['~', '>>>', '>>', '<<', '|', '&'], int32Hint: true }],
+        'max-len': [
+            2,
+            {
+                code: 100
+            }
+        ],
+        'no-bitwise': [
+            1,
+            {
+                allow: ['~', '>>>', '>>', '<<', '|', '&'],
+                int32Hint: true
+            }
+        ],
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
         'no-underscore-dangle': [0],
-        'no-unused-vars': [0, { argsIgnorePattern: 'next' }],
+        'no-unused-vars': [
+            0,
+            {
+                argsIgnorePattern: 'next'
+            }
+        ],
         quotes: [2, 'single'],
         semi: [2, 'always'],
         'space-before-function-paren': 'off',
         'react/prefer-stateless-function': 'off',
         'react/no-unescaped-entities': 0,
+        'react/require-default-props': 2,
         'react/jsx-indent-props': [2, 4],
+        'react/jsx-first-prop-new-line': [1, 'multiline'],
+        'react/jsx-max-props-per-line': [1, { maximum: 0, when: 'multiline' }],
         'react/jsx-filename-extension': [
             1,
             {
