@@ -133,6 +133,7 @@
         "testURL": "http://localhost/",
         "collectCoverageFrom": [
             "src/**/*.{js,jsx}",
+            "!.storybook/**/*.{js,jsx}",
             "!src/app.js",
             "!src/components/themes/**/*.{js,jsx}",
             "!src/**/*.stories.{js,jsx}",

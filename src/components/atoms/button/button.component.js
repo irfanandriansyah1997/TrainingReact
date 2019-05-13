@@ -96,11 +96,11 @@ const getFontColor = (disable, outline, type) => {
     }
 
     return css`
-        ${fontColor(palette(`${type}Text`, disable ? 3 : 0))}
+        ${fontColor(palette(`${type}Text`, disable ? 1 : 0))}
 
         &:hover,
         &:focus {
-            ${fontColor(palette(`${type}Text`, disable ? 3 : 0))}
+            ${fontColor(palette(`${type}Text`, disable ? 1 : 0))}
         }
     `;
 };
