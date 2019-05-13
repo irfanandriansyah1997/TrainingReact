@@ -6,7 +6,10 @@ module.exports = async ({ config, mode }) => {
     config.resolve.extensions.push('.es6', '.js', '.jsx', '.styl', '.less', '.sass', '.css');
     config.resolve.alias = {
         ...config.resolve.alias,
-        '@': path.resolve(__dirname, '../src')
+        '@': path.resolve(__dirname, '../src'),
+        storybook: path.resolve(__dirname, 'component'),
+        'storybook-atom': path.resolve(__dirname, 'component/atoms'),
+        'storybook-template': path.resolve(__dirname, 'component/templates')
     };
     config.module.rules = [
         ...config.module.rules,
