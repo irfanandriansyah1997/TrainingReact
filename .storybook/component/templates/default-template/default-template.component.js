@@ -14,7 +14,7 @@ class DefaultTemplateComponent extends Component {
                     <div className="ui-default__heading__logo">
                         <img src="https://i.ibb.co/60tV5Ts/doc.png" alt="image documentation" />
                     </div>
-                    <div class="ui-default__heading__text">
+                    <div className="ui-default__heading__text">
                         <h1>Dokumentasi Komponen</h1>
                         <p>Berikut adalah penjelasan dokumentasi komponen {componentName}</p>
                     </div>

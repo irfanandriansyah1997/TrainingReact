@@ -7,7 +7,9 @@ import defaultTheme from '@/components/themes/default';
 const themes = [defaultTheme];
 
 import ButtonStorybook from '@/components/atoms/button/storybook/button.component.stories';
+import TextStorybook from  '@/components/atoms/text/storybook/text.component.stories';
 
 storiesOf('Atomic Component', module)
     .addDecorator(withThemesProvider(themes))
-    .add('Button', () => <ButtonStorybook />);
+    .add('Button', () => <ButtonStorybook />)
+    .add('Text', () => <TextStorybook />);

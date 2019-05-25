@@ -5,6 +5,27 @@ import Highlight from 'react-highlight';
 import './style.scss';
 
 class CodingComponent extends Component {
+    constructor() {
+        super();
+        this.copyToClipboard = this.copyToClipboard.bind(this);
+    }
+
+    copyToClipboard() {
+        const { code } = this.props;
+        const el = document.createElement('textarea');
+        el.value = code;
+        el.setAttribute('readonly', '');
+        el.style = {
+            position: 'absolute',
+            left: '-9999px',
+            display: 'none'
+        };
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    }
+
     render() {
         const { children, code } = this.props;
         return (
@@ -13,8 +34,11 @@ class CodingComponent extends Component {
                 <div className="ui-default__code__source-code">
                     <div className="ui-default__code__source-code__bar">
                         <p>Source Code</p>
-                        <a className="ui-default__code__copy">
-                            <i class="material-icons">file_copy</i>Copy
+                        <a
+                            className="ui-default__code__copy"
+                            onClick={this.copyToClipboard}
+                        >
+                            <i className="material-icons">file_copy</i>Copy
                         </a>
                     </div>
                     <Highlight>{code}</Highlight>

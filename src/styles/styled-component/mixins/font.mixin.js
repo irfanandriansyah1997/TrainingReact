@@ -5,6 +5,7 @@
  */
 
 import { css } from 'styled-components';
+import { size, font, palette } from 'styled-theme';
 
 /**
  * To set font family
@@ -16,10 +17,10 @@ export const fontFamily = (name) => css`
 
 /**
  * To set font weight
- * @param  {string|int} size
+ * @param  {string|int} fontsize
  */
-export const fontSize = (size) => css`
-    font-size: ${size};
+export const fontSize = (fontsize) => css`
+    font-size: ${fontsize};
 `;
 
 /**
@@ -48,26 +49,26 @@ export const fontStretch = (style = 'normal') => css`
 
 /**
  * To set line height
- * @param  {string|int} style
+ * @param  {string|int} lineheight
  */
-export const lineHeight = (size) => css`
-    line-height: ${size};
+export const lineHeight = (lineheight) => css`
+    line-height: ${lineheight};
 `;
 
 /**
  * To set letter-spacing
- * @param  {string|int} size
+ * @param  {string|int} spacing
  */
-export const letterSpacing = (size = 'initial') => css`
-    letter-spacing: ${size};
+export const letterSpacing = (spacing = 'initial') => css`
+    letter-spacing: ${spacing};
 `;
 
 /**
  * To set text-align
- * @param  {string} size
+ * @param  {string} align
  */
-export const textAlign = (size = 'initial') => css`
-    text-align: ${size};
+export const textAlign = (align = 'initial') => css`
+    text-align: ${align};
 `;
 
 /**
@@ -111,3 +112,58 @@ export const fontFace = (
     ${textAlign(paramTextAlign === null ? 'initial' : paramTextAlign)}
     ${fontColor(paramFontColor)}
 `;
+
+/**
+ * To set style for heading
+ * @param  {string} selector
+ */
+export const generateHeadingStyle = (selector) => {
+    const fontsize = size(`heading${selector.charAt(0).toUpperCase()}${selector.slice(1)}`);
+    const lineheight = size(`lineHeading${selector.charAt(0).toUpperCase()}${selector.slice(1)}`);
+    const text = {
+        h1: {
+            fontWeight: 'bold'
+        },
+        h2: {
+            fontWeight: 'bold'
+        },
+        h3: {
+            fontWeight: 'bold'
+        },
+        h4: {
+            fontWeight: 'bold'
+        },
+        h5: {
+            fontWeight: 'bold'
+        },
+        h6: {
+            fontWeight: 'bold'
+        },
+        normal: {
+            fontWeight: 'normal'
+        },
+        featured: {
+            fontWeight: 'normal'
+        },
+        meta: {
+            fontWeight: 'normal'
+        },
+        caption: {
+            fontWeight: 'bold'
+        }
+    };
+
+    return css`
+        ${fontFace(
+        font('primary'),
+        fontsize,
+        text[selector].fontWeight,
+        'normal',
+        'normal',
+        lineheight,
+        'normal',
+        'initial',
+        palette('grayscale', 0)
+    )}
+    `;
+};
