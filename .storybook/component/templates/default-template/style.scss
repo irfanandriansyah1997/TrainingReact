@@ -21,6 +21,12 @@ body {
     justify-content: center;
     width: 100%;
 
+    hr {
+        @include margin(all, 20px 0);
+        @include no-border();
+        @include border-bottom(1px, dashed, $card-border);
+    }
+
     &__heading {
         display: flex;
         height: 250px;
