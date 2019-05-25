@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import renderer from 'react-test-renderer';
 import {
     fontFace,
@@ -17,9 +17,13 @@ import {
     lineHeight,
     letterSpacing,
     textAlign,
-    fontColor
+    fontColor,
+    generateHeadingStyle
 } from './font.mixin';
+import Theme from '@/components/themes/default';
+import Size from '@/components/themes/default/size.theme';
 import 'jest-styled-components';
+
 
 it('Test render font family mixin', () => {
     const Style = styled.button`
@@ -170,4 +174,75 @@ it('Test render font face with null value', () => {
     expect(component).toHaveStyleRule('letter-spacing', 'initial');
     expect(component).toHaveStyleRule('text-align', 'initial');
     expect(component).toHaveStyleRule('color', '#000');
+});
+
+it('Test render generateHeadingStyle', () => {
+    const element = [
+        {
+            name: 'h1',
+            weight: 'bold'
+        },
+        {
+            name: 'h2',
+            weight: 'bold'
+        },
+        {
+            name: 'h3',
+            weight: 'bold'
+        },
+        {
+            name: 'h4',
+            weight: 'bold'
+        },
+        {
+            name: 'h5',
+            weight: 'bold'
+        },
+        {
+            name: 'h6',
+            weight: 'bold'
+        },
+        {
+            name: 'normal',
+            weight: 'normal'
+        },
+        {
+            name: 'featured',
+            weight: 'normal'
+        },
+        {
+            name: 'meta',
+            weight: 'normal'
+        },
+        {
+            name: 'caption',
+            weight: 'bold'
+        }
+    ];
+
+    element.map(({ name, weight }) => {
+        const Style = styled.button`
+            ${generateHeadingStyle(name)}
+        `;
+        const component = renderer.create(
+            <ThemeProvider theme={Theme}>
+                <Style />
+            </ThemeProvider>
+        ).toJSON();
+
+        const fontsize = Size[`heading${name.charAt(0).toUpperCase()}${name.slice(1)}`];
+        const lineheight = Size[`lineHeading${name.charAt(0).toUpperCase()}${name.slice(1)}`];
+
+        expect(component).toHaveStyleRule('font-family', '\'Avenir Next\',sans-serif');
+        expect(component).toHaveStyleRule('font-size', fontsize);
+        expect(component).toHaveStyleRule('font-weight', weight);
+        expect(component).toHaveStyleRule('font-style', 'normal');
+        expect(component).toHaveStyleRule('font-stretch', 'normal');
+        expect(component).toHaveStyleRule('line-height', lineheight);
+        expect(component).toHaveStyleRule('letter-spacing', 'normal');
+        expect(component).toHaveStyleRule('text-align', 'initial');
+        expect(component).toHaveStyleRule('color', '#3e4246');
+
+        return true;
+    });
 });
