@@ -12,6 +12,38 @@ const fontSize = {
 };
 
 /*
+ * variable heading font size
+ */
+const fontSizeHeading = {
+    headingH1: fontSize.textSize3Xl,
+    headingH2: fontSize.textSize2Xl,
+    headingH3: fontSize.textSizeXl,
+    headingH4: fontSize.textSizeLg,
+    headingH5: fontSize.textSizeBase,
+    headingH6: fontSize.textSizeSm,
+    headingNormal: fontSize.textSizeBase,
+    headingFeatured: '28px',
+    headingMeta: fontSize.textSizeSm,
+    headingCaption: fontSize.textSizeSm
+};
+
+/*
+ * variable heading line height
+ */
+const lineHeightHeading = {
+    lineHeadingH1: '44px',
+    lineHeadingH2: '33px',
+    lineHeadingH3: '27px',
+    lineHeadingH4: '25px',
+    lineHeadingH5: '22px',
+    lineHeadingH6: '19px',
+    lineHeadingNormal: '22px',
+    lineHeadingFeatured: '39px',
+    lineHeadingMeta: '19px',
+    lineHeadingCaption: '24px'
+};
+
+/*
  * button font size
  */
 const buttonFontSize = {
@@ -63,6 +95,8 @@ const viewportSize = {
 
 export default {
     ...fontSize,
+    ...fontSizeHeading,
+    ...lineHeightHeading,
     ...columnSize,
     ...spacingSize,
     ...viewportSize,
