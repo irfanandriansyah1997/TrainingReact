@@ -7,7 +7,8 @@ import {
 } from '@/styles/styled-component/mixins/font.mixin';
 
 const TextComponent = styled.p`
-    margin: 0;
+    display: block;
+    margin: 10px 0;
 
     ${(props) => css`
         ${generateHeadingStyle(props.type)}

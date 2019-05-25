@@ -33,7 +33,10 @@ class ButtonStorybook extends Component {
         const { component, wording } = this.state;
 
         return (
-            <Template componentName="Button" description={wording}>
+            <Template
+                componentName="Button"
+                description={wording}
+            >
                 <Heading>Penggunaan Komponen</Heading>
                 <Text>Contoh penggunaan komponent Button.</Text>
                 <Coding code={this.getCode()}>
