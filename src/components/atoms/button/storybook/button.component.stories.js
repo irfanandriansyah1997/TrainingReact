@@ -43,16 +43,6 @@ class ButtonStorybook extends Component {
                         </Button>
                     ))}
                 </Coding>
-                <br />
-                <Heading>Props & Dokumentasi</Heading>
-                <Text>Dokumentasi props dan default parameter pada props komponent Button</Text>
-                <Coding code={this.getCode()}>
-                    {component.map((item) => (
-                        <Button display="inline-block" {...item}>
-                            {item.text}
-                        </Button>
-                    ))}
-                </Coding>
             </Template>
         );
     }

@@ -116,6 +116,7 @@ const ButtonComponent = styled.button`
     flex-wrap: no-wrap;
     text-decoration: none;
     margin: 5px;
+    outline: 0;
 
     ${(props) => css`
         ${rounded(3)}
