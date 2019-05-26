@@ -1,3 +1,9 @@
+/**
+ * Default Template
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.03
+ */
+
 import React, { Component, lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
 import FooterComponent from '@/components/organisms/footer/footer.component';

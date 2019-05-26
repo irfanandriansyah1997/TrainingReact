@@ -1,3 +1,9 @@
+/**
+ * Size Theme
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.12
+ */
+
 /*
  * variable font size
  */

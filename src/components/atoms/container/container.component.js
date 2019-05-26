@@ -1,3 +1,9 @@
+/**
+ * Container Component
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.03
+ */
+
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { size } from 'styled-theme';

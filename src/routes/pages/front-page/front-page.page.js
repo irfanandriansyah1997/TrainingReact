@@ -1,3 +1,9 @@
+/**
+ * Front Page
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.03
+ */
+
 import React, { Component } from 'react';
 import DefaultTemplate from '@/components/templates/default-template/default-template.component';
 import Button from '@/components/atoms/button/button.component';

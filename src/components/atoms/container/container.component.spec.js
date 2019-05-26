@@ -1,3 +1,9 @@
+/**
+ * Container Component Test
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.03
+ */
+
 import React from 'react';
 import renderer from 'react-test-renderer';
 import ContainerComponent from './container.component';

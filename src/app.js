@@ -1,3 +1,9 @@
+/**
+ * Main Project
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.03
+ */
+
 /* eslint-disable */
 
 import React from 'react';
