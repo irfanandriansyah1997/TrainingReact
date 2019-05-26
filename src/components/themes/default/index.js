@@ -1,3 +1,9 @@
+/**
+ * Register Theme Default
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.12
+ */
+
 import { reversePalette } from 'styled-theme/composer';
 import sizes from './size.theme';
 import palette from './palette.theme';

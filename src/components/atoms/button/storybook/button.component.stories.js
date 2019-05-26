@@ -1,3 +1,9 @@
+/**
+ * Button Component Documentation
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.13
+ */
+
 /* eslint-disable */
 
 import React, { Component } from 'react';

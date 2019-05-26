@@ -15,7 +15,7 @@ return (
       type="h1"
   >
       Heading H1
-  </Icon>
+  </Text>
 )
 ```
 

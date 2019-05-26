@@ -1,3 +1,9 @@
+/**
+ * Palette Theme
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.12
+ */
+
 export default {
     primary: ['#3893d9', '#3d8ecc', '#9ed4ff', '#deedfa'],
     primaryText: ['#fff', 'rgba(255, 255, 255, 0.75)', '#3e4246', 'rgba(62, 66, 70, 0.5)'],

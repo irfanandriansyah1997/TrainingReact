@@ -1,3 +1,9 @@
+/**
+ * Icon Component Test
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.26
+ */
+
 import React from 'react';
 import { render } from 'enzyme';
 import Icon from './icon.component';

@@ -1,3 +1,9 @@
+/**
+ * FrontPage Test
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.05
+ */
+
 import React from 'react';
 import { shallow } from 'enzyme';
 import Page from './front-page.page';

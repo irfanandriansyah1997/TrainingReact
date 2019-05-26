@@ -1,3 +1,9 @@
+/**
+ * Button Component
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.13
+ */
+
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { palette, font, size } from 'styled-theme';

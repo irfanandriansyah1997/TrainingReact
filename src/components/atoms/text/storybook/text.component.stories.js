@@ -1,3 +1,9 @@
+/**
+ * Text Component Documentation
+ * @author Irfan Andriansyah <irfanandriansyah10@gmail.com>
+ * @since 2019.05.25
+ */
+
 import React, { Component } from 'react';
 import Template from 'storybook-template/default-template/default-template.component';
 import Heading from 'storybook/atoms/heading/heading.component';
