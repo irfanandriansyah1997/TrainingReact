@@ -6,7 +6,7 @@
 body {
     @include no-padding();
     @include no-margin();
-    @include background-color(rgba($primary, 0.025));
+    @include background-color(rgba(get-color(primary), 0.025));
 }
 
 * {
@@ -24,7 +24,7 @@ body {
     hr {
         @include margin(all, 20px 0);
         @include no-border();
-        @include border-bottom(1px, dashed, $card-border);
+        @include border-bottom(1px, dashed, border-light);
     }
 
     &__heading {
@@ -67,8 +67,8 @@ body {
 
         h1 {
             @include font-face(
-                $font-primary,
-                $white,
+                primary,
+                white,
                 32px,
                 600,
                 normal,
@@ -81,8 +81,8 @@ body {
 
         p {
             @include font-face(
-                $font-primary,
-                $white,
+                primary,
+                white,
                 16px,
                 400,
                 normal,
@@ -101,7 +101,7 @@ body {
 
         @include margin-top(-60px);
         @include rounded(5px);
-        @include background-color($white);
+        @include background-color(white);
         @include padding(all, 30px);
         @include margin-bottom(50px);
         @include box-shadow-multi(
@@ -112,7 +112,7 @@ body {
         &__heading {
             @include margin(all, -30px -30px 30px);
             @include padding(all, 20px 30px 10px);
-            @include border-bottom(1px, dashed, $card-border);
+            @include border-bottom(1px, dashed, border-light);
 
             .ui-text {
                 @include margin-bottom(0);
@@ -129,6 +129,24 @@ body {
             padding: 20px;
             color: #383a42;
             background: #fff;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ui-default {
+        &__heading {
+            height: initial;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            @include padding(all, 30px 10px 85px);
+        }
+
+        &__content {
+            width: calc(100% - 50px);
         }
     }
 }

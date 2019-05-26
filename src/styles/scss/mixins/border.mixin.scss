@@ -13,34 +13,34 @@
 }
 
 /**
- * Border Mixin
- */
+   * Border Mixin
+   */
 
 @mixin border($direction, $width, $type, $color: null) {
     @if $direction==all {
-        @include border(left, $width, $type, $color);
-        @include border(right, $width, $type, $color);
-        @include border(top, $width, $type, $color);
-        @include border(bottom, $width, $type, $color);
+        @include border(left, $width, $type, get-color($color));
+        @include border(right, $width, $type, get-color($color));
+        @include border(top, $width, $type, get-color($color));
+        @include border(bottom, $width, $type, get-color($color));
     } @else {
         border-#{$direction}: $width $type $color;
     }
 }
 
 @mixin border-left($width, $type, $color: null) {
-    @include border(left, $width, $type, $color);
+    @include border(left, $width, $type, get-color($color));
 }
 
 @mixin border-right($width, $type, $color: null) {
-    @include border(right, $width, $type, $color);
+    @include border(right, $width, $type, get-color($color));
 }
 
 @mixin border-top($width, $type, $color: null) {
-    @include border(top, $width, $type, $color);
+    @include border(top, $width, $type, get-color($color));
 }
 
 @mixin border-bottom($width, $type, $color: null) {
-    @include border(bottom, $width, $type, $color);
+    @include border(bottom, $width, $type, get-color($color));
 }
 
 @mixin no-border() {
