@@ -7,7 +7,7 @@
         top: 0;
         z-index: 100;
 
-        @include border-bottom(0.8px, solid, $card-border);
+        @include border-bottom(0.8px, solid, border-light);
     }
 
     &__content {
