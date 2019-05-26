@@ -31,7 +31,8 @@ class ButtonStorybook extends Component {
                 default: defaultIcon,
                 color: defaultIcon.map(item => ({...item, color: '#69acec' })),
                 small: defaultIcon.map(item => ({...item, size: 'small' })),
-                customSize: defaultIcon.map(item => ({...item, size: 30 })),
+                big: defaultIcon.map(item => ({...item, size: 'big' })),
+                customSize: defaultIcon.map(item => ({...item, size: 50 })),
             },
             wording: `Icon komponen digunakan untuk memanggil icon pada material icon / urbanindo icon font`,
             template: (children, color, size, type) => '<Icon' +
@@ -45,6 +46,10 @@ class ButtonStorybook extends Component {
                 {
                     key: 'small',
                     text: 'Icon small'
+                },
+                {
+                    key: 'big',
+                    text: 'Icon big'
                 },
                 {
                     key: 'color',

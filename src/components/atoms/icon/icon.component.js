@@ -1,6 +1,8 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
+import './style/style.scss';
+
 const getClassName = (children, size, type) => {
     const response = {
         'ui-atomic-icon': true,
@@ -28,8 +30,6 @@ const getStyle = (color, size) => {
         response.fontSize = `${size}px`;
     }
 
-    console.log(response);
-
     return response;
 };
 
@@ -55,7 +55,7 @@ IconComponent.propTypes = {
     color: PropTypes.string,
     size: PropTypes.oneOfType([
         PropTypes.number,
-        PropTypes.oneOf(['default', 'small'])
+        PropTypes.oneOf(['default', 'small', 'big'])
     ]),
     type: PropTypes.oneOf(['material', 'urbanindo'])
 };

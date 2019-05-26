@@ -21,9 +21,12 @@ describe('Testing container component in atomic component ', () => {
     });
 
     it('Test render container component with display block', () => {
-        const component = renderer.create(<ContainerComponent position="absolute" />).toJSON();
+        const component = renderer.create(<ContainerComponent
+            position="absolute"
+            display="block"
+        />).toJSON();
         expect(component).toHaveStyleRule('position', 'absolute');
-        expect(component).toHaveStyleRule('display', 'flex');
+        expect(component).toHaveStyleRule('display', 'block');
         expect(component).toHaveStyleRule('height', 'inherit');
         expect(component).toHaveStyleRule('margin', 'auto');
     });
