@@ -10,7 +10,7 @@
     "scripts": {
         "dev": "node_modules/.bin/webpack-dev-server --progress --config etc/webpack/webpack.config.development.js",
         "prod": "node_modules/.bin/webpack --config etc/webpack/webpack.config.production.js",
-        "preprod": "build-storybook -c .storybook -o storybook",
+        "preprod": "build-storybook -c .storybook -o storybook-docs",
         "lint": "node_modules/.bin/eslint --ext .js,.jsx src",
         "test": "jest --verbose src",
         "precommit-msg": "echo 'Pre-commit checks...' && exit 0",

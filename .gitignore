@@ -207,4 +207,4 @@ tags
 \.jest_coverage/
 
 # Build Storybook
-storybook
+storybook-docs

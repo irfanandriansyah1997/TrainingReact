@@ -117,7 +117,7 @@ jobs:
               git clone $CIRCLE_REPOSITORY_URL out
 
               cd out
-              mkdir -p out/storybook
+              mkdir -p out/storybook-docs
               git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
               git rm -rf .
               cd ..
@@ -126,7 +126,7 @@ jobs:
               yarn prod
 
               cp -a dist/. out/.
-              cp -a storybook/. out/storybook
+              cp -a storybook-docs/. out/storybook-docs
 
               mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
               cd out
