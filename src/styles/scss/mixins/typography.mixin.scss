@@ -39,15 +39,15 @@ $type_transform: (
 }
 
 @mixin font-family($name) {
-    font-family: $name;
+    font-family: text-type($name);
 }
 
 @mixin font-size($size) {
-    font-size: $size;
+    font-size: text-size($size);
 }
 
 @mixin font-weight($weight) {
-    font-weight: $weight;
+    font-weight: text-weight($weight);
 }
 
 @mixin font-style($style) {
@@ -55,7 +55,7 @@ $type_transform: (
 }
 
 @mixin font-color($color) {
-    color: $color;
+    color: get-color($color);
 }
 
 @function text-transform($transform) {
@@ -76,4 +76,14 @@ $type_transform: (
 
 @mixin letter-spacing($range) {
     letter-spacing: $range + px;
+}
+
+@function text-type($font) {
+    @if $font == 'primary' {
+        @return $font-primary;
+    } @else if $font == 'secondary' {
+        @return $font-secondary;
+    }
+
+    @return $font;
 }

@@ -93,7 +93,7 @@ video {
     vertical-align: baseline;
     align-items: center;
 
-    @include font-family($font-primary);
+    @include font-family(primary);
 }
 
 /* make sure to set some focus styles for accessibility */

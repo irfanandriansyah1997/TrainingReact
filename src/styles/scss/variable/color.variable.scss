@@ -1,75 +1,7 @@
 /**
- * Background Color Variable
- */
-
-$body: #fff;
-$footer: #39393d;
-$footer-bottom: #303034;
-
-/**
  * GLobal Color Variable
  */
 
-$primary: #3893d9;
-$secondary: #fd629c;
-$success: #10ae41;
-$success-light: #dcf2e6;
-$gray: #f0f0f0;
-$dark-gray: #636d7a;
-$light-gray: #f6f6f6;
-
-/**
- * Typography Color Variable
- */
-
-$white: #fff;
-$black: #000;
-$title: rgba($black, .7);
-$title-revamp: #3e4246;
-$text-revamp: #777a7f;
-$sub-title: rgba($black, .54);
-$description: rgba($black, .4);
-$title-navbar: #4a4a4a;
-$icon-card-text: #4e4e4e;
-$icon-card-color: #adadad;
-$whatsapp: #6cc751;
-
-/**
- * Border Color Variable
- */
-$card-border: #ececec;
-$card-border-light: #d8e2e8;
-$card-border-darken: #bdccd9;
-$card-border-darker: #e0e0e0;
-$border-grey: #adadad;
-
-/**
- * Search Bar Color Variable
- */
-$search-bar-bg: #f8f8f8;
-$search-bar-shadow: rgba($black, .31);
-$search-bar-border: $card-border;
-
-/**
- * Button Group Color
- */
-$button-group-color: (
-    inactive-border: #ccc,
-    inactive-font: #adadad,
-    active-border: $primary,
-    active-font: $white
-);
-
-/**
- * Dropdown Color
- */
-$dropdown-toggle-border: #e0e0e0;
-
-/**
- * checkbox Color
- */
-$checkbox-primary: #3d94d6;
-$checkbox-secondary: #fff;
 $color-general: (
     white: #fff,
     primary: #3d94d6,
@@ -85,12 +17,13 @@ $color-general: (
     border-grey: #adadad,
     border-light: #d8d8d8,
     warning: #ec8f3c,
-    warning-light: rgba(#ec8f3c, .1),
+    warning-light: rgba(#ec8f3c, 0.1),
     success: #4cba7e,
-    success-light: rgba(#4cba7e, .1),
+    success-light: rgba(#4cba7e, 0.1),
     error: #dc4e41,
-    error-light: rgba(#dc4e41, .1),
+    error-light: rgba(#dc4e41, 0.1),
     not-active: #3e4246,
+    // Variable another black: #22292f,
     grey-darkest: #3d4852,
     grey-darker: #606f7b,
     grey-dark: #8795a1,

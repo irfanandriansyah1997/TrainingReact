@@ -22,7 +22,7 @@ hue-6-2: #c18401
     overflow-x: auto;
     padding: 20px;
     color: #383a42;
-    background: $search-bar-bg;
+    background: #fafafa;
 
     @include font-family('Inconsolata');
     @include padding(all, 60px 20px 20px);
@@ -98,7 +98,7 @@ hue-6-2: #c18401
 }
 
 .ui-default__code {
-    @include border(all, 1px, solid, $card-border);
+    @include border(all, 1px, solid, border-light);
     @include rounded(5px);
     @include margin(all, 20px 0);
 
@@ -117,11 +117,11 @@ hue-6-2: #c18401
 
             @include padding(all, 5px 10px);
             @include rounded(0 0 0 5px);
-            @include background-color(rgba($black, 0.025));
-            @include border(all, thin, solid, $card-border);
+            @include background-color(rgba(#000, 0.025));
+            @include border(all, thin, solid, border-light);
             @include font-face(
-                $font-primary,
-                rgba($text-revamp, 0.75),
+                primary,
+                rgba(get-color(text-light), 0.75),
                 14px,
                 500,
                 normal,
@@ -145,7 +145,7 @@ hue-6-2: #c18401
             left: 0;
 
             @include padding(all, 0 20px);
-            @include background-color(rgba($black, 0.025));
+            @include background-color(rgba(#000, 0.025));
 
             p,
             a {
@@ -153,8 +153,8 @@ hue-6-2: #c18401
                 align-items: center;
 
                 @include font-face(
-                    $font-primary,
-                    rgba($text-revamp, 0.75),
+                    primary,
+                    rgba(get-color(text), 0.75),
                     14px,
                     500,
                     normal,
@@ -177,7 +177,7 @@ hue-6-2: #c18401
                 }
 
                 &:hover {
-                    @include background-color(rgba($black, 0.05));
+                    @include background-color(rgba(#000, 0.05));
                 }
             }
         }
