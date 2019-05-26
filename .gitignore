@@ -205,3 +205,6 @@ tags
 
 # End of https://www.gitignore.io/api/vim,node,bower,phpstorm+all,visualstudiocode
 \.jest_coverage/
+
+# Build Storybook
+storybook
