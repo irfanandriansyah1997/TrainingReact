@@ -18,6 +18,7 @@ const themes = [defaultTheme];
 import BadgesStorybook from '@/components/atoms/badges/storybook/badges.component.stories';
 import ButtonStorybook from '@/components/atoms/button/storybook/button.component.stories';
 import IconStorybook from  '@/components/atoms/icon/storybook/icon.component.stories';
+import LabelStorybook from  '@/components/atoms/label/storybook/label.component.stories';
 import TextStorybook from  '@/components/atoms/text/storybook/text.component.stories';
 
 
@@ -42,6 +43,11 @@ storiesOf('Atomic Component', module)
         }
     })
     .add('Icon', () => <IconStorybook />, {
+        notes: {
+            markdown: IconMD
+        }
+    })
+    .add('Label', () => <LabelStorybook />, {
         notes: {
             markdown: IconMD
         }

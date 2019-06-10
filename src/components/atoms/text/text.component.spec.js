@@ -21,7 +21,7 @@ it('Test render text', () => {
                 <Text
                     type="h1"
                     fontWeight="light"
-                    fontColor="#000"
+                    color="#000"
                 />
             </ThemeProvider>
         )
