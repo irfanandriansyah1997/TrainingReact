@@ -19,7 +19,7 @@ const TextComponent = styled.p`
     ${(props) => css`
         ${generateHeadingStyle(props.type)}
         ${fontWeight(props.fontWeight)}
-        ${fontColor(props.fontColor)}
+        ${fontColor(props.color)}
     `}
 `;
 

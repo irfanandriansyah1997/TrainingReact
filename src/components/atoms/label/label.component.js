@@ -23,7 +23,7 @@ export const LabelStyle = styled(BadgesStyle)`
     ${(props) => css`
         ${backgroundColor(palette(props.type, props.type === 'tertiary' ? 3 : 0))}
         ${fontColor(palette(`${props.type}Text`, 0))}
-        ${roundedMixin(props.rounded ? '20px' : '0')}
+        ${roundedMixin(props.rounded ? '20' : '0')}
         ${fontWeight(500)}
     `}
 `;
