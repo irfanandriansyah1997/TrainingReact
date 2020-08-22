@@ -1,15 +1,20 @@
-import React, { ReactElement } from 'react';
+import LifecycleRouter from './content/lifecycle/lifecycle.router';
+import RoutingAppAbstract from './shared/modules/routing/abstract/routing-app.abstract';
 
 /**
  * Apps Instance
  * @returns {ReactElement}
  */
-function App(): ReactElement {
-    return (
-        <div className="App">
-            Hello World
-        </div>
-    );
+class App extends RoutingAppAbstract {
+    /**
+     * Modules
+     * @return {Object[]}
+     */
+    get modules(): Object[] {
+        return [
+            LifecycleRouter
+        ];
+    }
 }
 
 export default App;
