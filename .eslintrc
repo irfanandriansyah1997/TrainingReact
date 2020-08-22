@@ -106,6 +106,7 @@
       "react/destructuring-assignment": "off",
       "indent": ["error", 4],
       "no-empty": "error",
+      "class-methods-use-this": ["off"],
       "no-multiple-empty-lines": "error",
       "lines-between-class-members": ["error", "always"],
       "padded-blocks": ["error", "never"]
