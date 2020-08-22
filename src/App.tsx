@@ -1,7 +1,5 @@
 import React, { ReactElement } from 'react';
 
-import ContentRouter from './content/content.router';
-
 /**
  * Apps Instance
  * @returns {ReactElement}
@@ -9,7 +7,7 @@ import ContentRouter from './content/content.router';
 function App(): ReactElement {
     return (
         <div className="App">
-            <ContentRouter />
+            Hello World
         </div>
     );
 }
