@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - '12.15'
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - yarn run lint
+  - CI=true yarn run test --coverage 
+  - bash <(curl -s https://codecov.io/bash) -t df123187-aba8-44bf-a3e8-b3c90638f56a
