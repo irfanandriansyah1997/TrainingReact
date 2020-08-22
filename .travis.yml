@@ -10,3 +10,15 @@ script:
   - yarn run lint
   - CI=true yarn run test --coverage 
   - bash <(curl -s https://codecov.io/bash) -t df123187-aba8-44bf-a3e8-b3c90638f56a
+
+before_deploy:
+  - yarn run build
+
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    keep_history: true
+    local_dir: build
+    on:
+      branch: master
